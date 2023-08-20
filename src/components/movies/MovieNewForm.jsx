@@ -22,7 +22,6 @@ const MovieNewForm = () => {
     e.preventDefault();
     createMovie(movie)
       .then((createdMovie) => {
-        console.log(createdMovie)
         alert(`New movie created: ${createdMovie.title}`);
         navigate(`/movies/${createdMovie.id}`);
       })
