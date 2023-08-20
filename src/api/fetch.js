@@ -55,5 +55,5 @@ export function createMovie(movie) {
     body: JSON.stringify(movie),
     headers: { "Content-Type": "application/json" },
   };
-  return fetch(`${URL}/movies`, options);
+  return fetch(`${URL}/movies`, options).then((res) => res.json());
 }
